@@ -31,7 +31,7 @@ public class TaxiService {
                 throw new RuntimeException("Options are empty");
         }
 
-        double priceDouble = currentPrice.getOptions().get(0).getPrice();
+        double priceDouble = currentPrice.getOptions().getFirst().getPrice();
         MomentPrice momentPrice = new MomentPrice(
                 LocalDateTime.now(ZoneId.of("Russia/Moscow")),
                 priceDouble
